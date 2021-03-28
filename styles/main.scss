@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+html{
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+    background-color: #181818;
+    position: relative;
+    overflow-x: hidden !important;
+}
+nav{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    a{
+        img{
+            display: block;
+            height: 40px;
+        }
+    }
+    &::before{
+        content: "<nav>";
+        position: absolute;
+        color: #cbcbcb;
+        left: 10px;
+        top: 5px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: "Source Code Pro", sans-serif;
+    }
+    &::after{
+        content: "</nav>";
+        position: absolute;
+        color: #cbcbcb;
+        right: 10px;
+        bottom: 5px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: "Source Code Pro", sans-serif;
+    }
+    #menuToggle{
+        position: absolute;
+        color: #fff;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.1rem;
+        z-index: 10;
+        letter-spacing: 0.03rem;
+        cursor: pointer;
+        user-select: none;
+        padding: 0 0.3rem;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            top: 50%;
+            right: 0;
+            background-color: #fff;
+            transition: all 500ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        }
+    }
+    .menuToggleActive{
+        &::after{
+            width: 100% !important;
+        }
+    }
+    #toggleBox{
+        display: none;
+    }
+}
+
+section.mainCont{
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before{
+        content: "<section>";
+        position: absolute;
+        color: #cbcbcb;
+        left: 10px;
+        top: 5px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: "Source Code Pro", sans-serif;
+    }
+    &::after{
+        content: "</section>";
+        position: absolute;
+        color: #cbcbcb;
+        right: 10px;
+        bottom: 5px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: "Source Code Pro", sans-serif;
+    }
+    div.sectionCont{
+        display: flex;
+        max-width: 1300px;
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        div.details{
+            width: 60%;
+            padding: 2rem;
+            img{
+                display: inline-block;
+            }
+            p.info{
+                max-width: 70%;
+                color: #E5E5E5;
+                font-size: 1.1rem;
+                line-height: 1.8rem;
+                letter-spacing: 0.03rem;
+                margin-top: 0.5rem;
+            }
+            a.touch{
+                padding: 0.8rem 1.2rem;
+                text-decoration: none;
+                background-color: #DADADA;
+                color: #181818;
+                font-weight: 500;
+                font-size: 1rem;
+                border-radius: 8px;
+                margin-top: 1.5rem;
+                display: inline-block;
+            }
+        }
+        div.img{
+            height: 522px;
+            width: 40%;
+            border-radius: 8px;
+            background-image: url('../assets/image.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            &::before{
+                content: "<img>";
+                position: absolute;
+                color: #cbcbcb;
+                left: 10px;
+                top: 5px;
+                font-size: 0.75rem;
+                opacity: 0.5;
+                font-family: "Source Code Pro", sans-serif;
+            }
+            &::after{
+                content: "</img>";
+                position: absolute;
+                color: #cbcbcb;
+                right: 10px;
+                bottom: 5px;
+                font-size: 0.75rem;
+                opacity: 0.5;
+                font-family: "Source Code Pro", sans-serif;
+            }
+        }
+    }
+    footer{
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin: 0 0.3rem;
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            
+        }
+    }
+}
+
+section.floatNav{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background-color: #000;
+    top: 0;
+    right: -50%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    ul{
+        list-style: none;
+        li{
+            margin: 1rem 0;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: 0.04rem;
+            }
+            &:first-child{
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
