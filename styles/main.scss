@@ -221,3 +221,47 @@ section.floatNav{
         }
     }
 }
+section.pageCont{
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    padding: 4rem 0;
+    &::before{
+        content: "<section>";
+        position: absolute;
+        color: #cbcbcb;
+        left: 10px;
+        top: 5px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: "Source Code Pro", sans-serif;
+    }
+    &::after{
+        content: "</section>";
+        position: absolute;
+        color: #cbcbcb;
+        right: 10px;
+        bottom: 5px;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-family: "Source Code Pro", sans-serif;
+    }
+    div.aboutCont{
+        width: 95%;
+        max-width: 1300px;
+        margin: 0 auto;
+        h1{
+            font-weight: 300;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        p{
+            color: #E5E5E5;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            letter-spacing: 0.04rem;
+            font-weight: 400;
+        }
+    }
+}
