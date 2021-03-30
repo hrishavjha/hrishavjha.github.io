@@ -94,6 +94,32 @@ nav #toggleBox {
   display: none;
 }
 
+@-webkit-keyframes slideRightELem {
+  0% {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightELem {
+  0% {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 section.mainCont {
   width: 100%;
   height: calc(100vh - 70px);
@@ -182,6 +208,8 @@ section.mainCont div.sectionCont div.img {
   background-position: center;
   background-size: cover;
   position: relative;
+  -webkit-animation: slideRightELem 500ms ease-in-out forwards;
+          animation: slideRightELem 500ms ease-in-out forwards;
 }
 
 section.mainCont div.sectionCont div.img::before {
@@ -323,5 +351,138 @@ section.pageCont div.aboutCont p {
   line-height: 1.8rem;
   letter-spacing: 0.04rem;
   font-weight: 400;
+}
+
+section.pageCont div.aboutCont p.tags {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #fff;
+  line-height: initial;
+}
+
+section.pageCont div.aboutCont div.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.pageCont div.aboutCont div.tags span {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0.5rem 0.2rem;
+}
+
+section.pageCont div.aboutCont div.tags span:first-child {
+  margin-left: 0;
+  background-color: #34568B;
+}
+
+section.pageCont div.aboutCont div.tags span:last-child {
+  margin-right: 0;
+  background-color: #e7b134;
+}
+
+section.pageCont div.aboutCont div.tags span:nth-child(2) {
+  background-color: #FF6F61;
+}
+
+section.pageCont div.aboutCont div.tags span:nth-child(3) {
+  background-color: #6B5B95;
+}
+
+section.pageCont div.aboutCont div.tags span:nth-child(4) {
+  background-color: #88B04B;
+}
+
+section.pageCont div.aboutCont div.tags span:nth-child(5) {
+  background-color: #955251;
+}
+
+section.pageCont div.aboutCont div.tags span:nth-child(6) {
+  background-color: #009B77;
+}
+
+div.projectCont {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+div.projectCont div.project {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border-radius: 6px;
+  padding: 1rem;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+div.projectCont div.project:hover {
+  background-color: #141414;
+}
+
+div.projectCont div.project:first-child {
+  margin-top: 0;
+}
+
+div.projectCont div.project:last-child {
+  margin-bottom: 0;
+}
+
+div.projectCont div.project img {
+  display: inline-block;
+  width: 500px;
+}
+
+div.projectCont div.project div.projDet {
+  padding: 0 1rem;
+}
+
+div.projectCont div.project div.projDet p {
+  margin: 0;
+  padding: 0;
+}
+
+div.projectCont div.project div.projDet p.head {
+  font-size: 2rem;
+  color: #fff;
+}
+
+div.projectCont div.project div.projDet p.tag {
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  color: #cbcbcb;
+}
+
+div.projectCont div.project div.projDet p.desc {
+  font-size: 1rem;
+  max-width: 90%;
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+  color: #DADADA;
+}
+
+div.projectCont div.project div.projDet p.url {
+  font-size: 1rem;
+  color: #DADADA;
+  margin-top: 0.5rem;
+}
+
+div.projectCont div.project div.projDet p.url a {
+  text-decoration: none;
+  color: #009B77;
+  display: inline-block;
+  margin-left: 0.3rem;
 }
 /*# sourceMappingURL=main.css.map */
