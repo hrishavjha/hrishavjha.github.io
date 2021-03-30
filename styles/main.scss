@@ -64,7 +64,7 @@ nav{
             top: 50%;
             right: 0;
             background-color: #fff;
-            transition: all 500ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            transition: 500ms cubic-bezier(.65,0,.3,1);
         }
     }
     .menuToggleActive{
@@ -90,10 +90,12 @@ nav{
 
 section.mainCont{
     width: 100%;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    height: auto;
     position: relative;
     display: flex;
     align-items: center;
+    padding: 2rem 0;
     &::before{
         content: "<section>";
         position: absolute;
@@ -211,7 +213,7 @@ section.floatNav{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 500ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: 500ms cubic-bezier(.65,0,.3,1);
     ul{
         list-style: none;
         li{
